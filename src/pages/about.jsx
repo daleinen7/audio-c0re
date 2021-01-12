@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-export default function Home() {
+export default function About() {
   return(
     <Layout>
-      <p>Like ridesharing but for headphones?</p>
+      <h1>About page</h1>
     </Layout>
   )
 }
