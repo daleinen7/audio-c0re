@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Layout from "../../components/Layout"
+import Layout from "../components/Layout"
 
 
 const Location = () => {
@@ -8,34 +8,32 @@ const Location = () => {
     graphql`
     query MyQuery {
     allContentfulLocation {
-        edges {
-            node {
-                city
-                citySlug
-                }   
-            }
+      edges {
+        node {
+          city
+          citySlug
+          }   
         }
-    }
-
-    `
+      }
+    }`
   )
 
   return (
       <Layout>
-          <div class="content">
+        <div class="content">
         <h1>Locations</h1>
         <ul>
           {queryData.allContentfulLocation.edges.map((location) => {
             return (
-                <li>
-                    <Link to={`/locations/${location.node.citySlug}`}>   
-                        {location.node.city}
-                    </Link>
-                </li>
+              <li>
+                  <Link to={`/location/${location.node.citySlug}/`}>   
+                      {location.node.city}
+                  </Link>
+              </li>
             );
           })}
-          </ul>
-          </div>
+        </ul>
+      </div>
     </Layout>
   );
 };
