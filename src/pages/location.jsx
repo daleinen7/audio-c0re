@@ -21,19 +21,19 @@ const Location = () => {
   return (
       <Layout>
         <div class="content">
-        <h1>Locations</h1>
-        <ul>
-          {queryData.allContentfulLocation.edges.map((location) => {
-            return (
-              <li>
-                  <Link to={`/location/${location.node.citySlug}/`}>   
-                      {location.node.city}
-                  </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+          <h1>Locations</h1>
+          <ul>
+            {queryData.allContentfulLocation.edges.map((location) => {
+              return (
+                <li>
+                    <Link to={`/location/${location.node.citySlug}/`}>   
+                        {location.node.city}
+                    </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
     </Layout>
   );
 };
