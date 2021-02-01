@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+// import {} from "@chakra-ui/core";
 
 export default function Layout({children}) {
   return(
@@ -9,6 +10,7 @@ export default function Layout({children}) {
         <Link to={`/`}>Home</Link>
         <Link to={`/about`}>About</Link>
         <Link to={`/location`}>Location</Link>
+        <Link to={`/contact`}>Contact</Link>
       </header>
       {children}
       <footer>
