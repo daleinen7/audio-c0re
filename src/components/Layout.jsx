@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-// import {} from "@chakra-ui/core";
+import {} from "@chakra-ui/core";
 
 export default function Layout({children}) {
   return(
